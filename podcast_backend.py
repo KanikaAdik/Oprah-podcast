@@ -102,8 +102,6 @@ def get_podcast_guest(podcast_transcript):
   ## ADD YOUR LOGIC HERE TO RETURN THE PODCAST GUEST INFORMATION
   import json
   request = podcast_transcript[:5000]
-  #enc = tiktoken.encoding_for_model("gpt-3.5-turbo")
-
   completion = openai.ChatCompletion.create(
       model="gpt-3.5-turbo",
       messages=[{"role": "user", "content": request}],
